@@ -1,0 +1,6 @@
+{# players/player.stream.html.twig #}
+<turbo-stream action="append" target="{{ topic }}">
+    <template>
+        {% include 'players/player.html.twig' with {'player': player} %}
+    </template>
+</turbo-stream>

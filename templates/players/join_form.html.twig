@@ -1,0 +1,28 @@
+{% block match_group_join_form %}
+    <div data-controller="joinform"></div>
+    {{ form_start(joinForm, {'attr': {'class': 'mt-4', 'id': 'join-form'}}) }}
+
+    {{ form_widget(joinForm.matchGroupShortId, {'type': 'hidden', 'value': matchGroup.shortId}) }}
+    <div class="registration-form-inputs">
+
+        <div class="mb-3">
+            {{ form_label(joinForm.name, 'Name', {'label_attr': {'class': 'form-label'}}) }}
+            {{ form_widget(joinForm.name, {'attr': {'class': 'form-control'}}) }}
+        </div>
+
+        <div class="form-check mb-3">
+            {{ form_widget(joinForm.wantsNotifications, {'type': 'checkbox', 'attr': {'id': 'notification-toggle', 'class': 'form-check-input', 'checked': true}}) }}
+            {{ form_label(joinForm.wantsNotifications, 'Möchte Updates von der Gruppe per Mail erhalten.', {'label_attr': {'class': 'form-check-label'}}) }}
+        </div>
+
+        <div id="email-input-container">
+            <div class="mb-3">
+                {{ form_label(joinForm.email, 'Email (nur für Updates benötigt)', {'label_attr': {'class': 'form-label'}}) }}
+                {{ form_widget(joinForm.email, {'type': 'email', 'attr': {'class': 'form-control'}}) }}
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Anmelden</button>
+    </div>
+    {{ form_end(joinForm) }}
+{% endblock %}

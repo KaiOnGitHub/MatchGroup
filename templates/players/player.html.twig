@@ -1,0 +1,18 @@
+{% block player %}
+    <div class="registered-player">
+        <div class="registered-player-name">{{ player.name }}</div>
+        <div class="registered-player-actions">
+            {% if player.authToken in authTokens %}
+                <div class="remove-registered-player">
+                    <form method="POST" action="{{ path('remove_player_from_match_group') }}">
+                        <input type="hidden" name="playerId" value="{{ player.id }}">
+                        <input type="hidden" name="authToken" value="{{ player.authToken }}">
+                        <input type="hidden" name="matchGroupShortId"
+                               value="{{ matchGroup.shortId }}">
+                        <button type="submit" class="btn btn-danger">Abmelden</button>
+                    </form>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

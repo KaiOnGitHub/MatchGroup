@@ -1,0 +1,6 @@
+{# chat/message.stream.html.twig #}
+<turbo-stream action="append" target="{{ topic }}">
+    <template>
+        {% include 'chat/message.html.twig' with {'message': message} %}
+    </template>
+</turbo-stream>

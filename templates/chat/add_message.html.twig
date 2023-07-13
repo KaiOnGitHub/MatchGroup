@@ -1,0 +1,18 @@
+{% block body %}
+    <h2>Öffentliche Nachricht schreiben</h2>
+
+    {{ form_start(addMessageForm, {'attr': {'class': 'mt-4'}}) }}
+
+    {{ form_widget(addMessageForm.matchGroupShortId, {'type': 'hidden', 'value': matchGroupShortId}) }}
+
+    <div class="mb-3">
+        {{ form_label(addMessageForm.sender, 'Absender', {'label_attr': {'class': 'form-label'}}) }}
+        {{ form_widget(addMessageForm.sender, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="mb-3">
+        {{ form_label(addMessageForm.message, 'Nachricht', {'label_attr': {'class': 'form-label'}}) }}
+        {{ form_widget(addMessageForm.message, {'attr': {'class': 'form-control', 'data-action': 'keydown->chat#submitFormOnEnter'}}) }}
+    </div>
+    <button type="submit" id="sendMessageButton" class="btn btn-primary">Senden</button>
+    {{ form_end(addMessageForm) }}
+{% endblock %}

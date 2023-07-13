@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div data-controller="datepicker"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Gruppe erstellen</h1>
+                {# TODO: Actually make this form nice #}
+
+                {{ form_start(form, {'attr': {'class': 'mt-4'}}) }}
+                <div class="mb-3">
+                    {{ form_label(form.name, 'Name', {'label_attr': {'class': 'form-label'}}) }}
+                    {{ form_widget(form.name, {'attr': {'class': 'form-control', 'value': 'Beachvolleyball'}}) }}
+                </div>
+                <div class="mb-3">
+                    {{ form_label(form.location, 'Ort', {'label_attr': {'class': 'form-label'}}) }}
+                    {{ form_widget(form.location, {'attr': {'class': 'form-control', 'value': 'Unter der Palme'}}) }}
+                </div>
+                <div class="mb-3">
+                    {{ form_label(form.date, 'Datum und Uhrzeit', {'label_attr': {'class': 'form-label'}}) }}
+                    {{ form_widget(form.date, {'attr': {'class': 'form-control js-datepicker'}}) }}
+                </div>
+                <div class="mb-3">
+                    {{ form_label(form.numPlayersRequired, 'Anzahl MitspielerInnen insgesamt', {'label_attr': {'class': 'form-label'}}) }}
+                    {{ form_widget(form.numPlayersRequired, {'attr': {'class': 'form-control', 'value': 4}}) }}
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg">Erstellen</button>
+
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

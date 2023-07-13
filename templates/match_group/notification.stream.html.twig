@@ -1,0 +1,10 @@
+{# match_group/notification.stream.html.twig #}
+<turbo-stream action="append" target="{{ notificationTopic }}">
+    <template>
+        {% if message is defined %}
+        <div class="notification alert alert-primary" role="alert">
+            {{ message }}
+        </div>
+        {% endif %}
+    </template>
+</turbo-stream>

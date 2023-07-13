@@ -1,0 +1,11 @@
+{% block registered_players %}
+    <h2>Bereits angemeldet {{ matchGroup.getPlayers|length }} / {{ matchGroup.numPlayersRequired }}</h2>
+
+    {% set topic = "players_group_" ~ matchGroup.id %}
+
+    <div class="registered-players-list" id="{{ topic }}" {{ turbo_stream_listen(topic) }}>
+        {% for player in matchGroup.players %}
+            {% include 'players/player.html.twig' with {'player': player, 'authTokens': authTokens} %}
+        {% endfor %}
+    </div>
+{% endblock %}
