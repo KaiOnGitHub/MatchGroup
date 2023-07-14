@@ -1,0 +1,2 @@
+time="2023-07-14T12:50:43+02:00" level=warning msg="The \"PORT\" variable is not set. Defaulting to a blank string."
+parsing /Users/kai/Projects/personal/matchgroup/docker-compose.prod.yml: error while interpolating services.caddy.ports.[].target: failed to cast to expected type: strconv.Atoi: parsing "": invalid syntax

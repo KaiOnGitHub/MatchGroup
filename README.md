@@ -5,6 +5,19 @@ Start docker with xdebug enabled:
 
 ```XDEBUG_MODE=debug docker compose up -d```
 
+## Deployment
+- Deploying the container to Heroku caused the error `Exec format error`. This apparently has to do with the image being built on an M1 machine. See [Stackoverflow](https://stackoverflow.com/questions/66982720/keep-running-into-the-same-deployment-error-exec-format-error-when-pushing-nod)
+- Therefor we used this approach:
+```
+docker buildx build --platform linux/amd64 -t herokuarchitecture .
+
+docker tag herokuarchitecture registry.heroku.com/matchgroupapp/web
+
+docker push registry.heroku.com/matchgroupapp/web
+
+# then use heroku release to activate
+heroku container:release web -a matchgroupapp
+```
 Ideas:
 - We could use [Symfony UX Notify](https://symfony.com/bundles/ux-notify/current/index.html) for Browser Notifications
 
