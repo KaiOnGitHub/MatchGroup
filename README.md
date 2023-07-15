@@ -6,17 +6,20 @@ Start docker with xdebug enabled:
 ```XDEBUG_MODE=debug docker compose up -d```
 
 ## Deployment
-- Deploying the container to Heroku caused the error `Exec format error`. This apparently has to do with the image being built on an M1 machine. See [Stackoverflow](https://stackoverflow.com/questions/66982720/keep-running-into-the-same-deployment-error-exec-format-error-when-pushing-nod)
-- Therefor we used this approach:
 ```
-docker buildx build --platform linux/amd64 -t herokuarchitecture .
+ssh into digitalocean droplet, then
 
-docker tag herokuarchitecture registry.heroku.com/matchgroupapp/web
-
-docker push registry.heroku.com/matchgroupapp/web
-
-# then use heroku release to activate
-heroku container:release web -a matchgroupapp
+TEST_VAR="test" \
+SERVER_NAME="matchgroup.tech, caddy:80" \
+MAILER_DSN="mailgun+api://d5f051b9c22753db2fb16e46d0bee518-262b213e-bfc911af:mailgun.matchgroup.tech@default?region=api.eu.mailgun.net" \
+HTTP_PORT=80 \
+HTTPS_PORT=443 \
+HTTP3_PORT=443 \
+APP_ENV=prod \
+APP_SECRET=7795fcadf101fb8587f86904ca8a37227926b53cc06ec287e81cec5485895626 \
+POSTGRES_PASSWORD=a9801f03f05c00bb5ace4249ae8e4691a98eb29bad559a9d \
+CADDY_MERCURE_JWT_SECRET=cad51fa22b51bb7d0ab7aef1f966a450019efad78c7645ace0d51fd49eb08752 \
+docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 ```
 Ideas:
 - We could use [Symfony UX Notify](https://symfony.com/bundles/ux-notify/current/index.html) for Browser Notifications
