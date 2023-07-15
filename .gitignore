@@ -13,3 +13,5 @@
 /public/assets/
 ###< symfony/asset-mapper ###
 .env.prod
+
+Deployment.md
