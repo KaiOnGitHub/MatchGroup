@@ -9,7 +9,6 @@ Start docker with xdebug enabled:
 ```
 ssh into digitalocean droplet, then
 
-TEST_VAR="test" \
 SERVER_NAME="matchgroup.tech, caddy:80" \
 MAILER_DSN="mailgun+api://d5f051b9c22753db2fb16e46d0bee518-262b213e-bfc911af:mailgun.matchgroup.tech@default?region=api.eu.mailgun.net" \
 HTTP_PORT=80 \
