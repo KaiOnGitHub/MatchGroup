@@ -60,6 +60,10 @@ header {
     margin: 40px auto;
 }
 
+.container.home {
+    max-width: 600px;
+}
+
 .card {
     border: none;
     margin-bottom: 20px;

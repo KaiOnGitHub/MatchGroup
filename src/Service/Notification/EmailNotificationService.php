@@ -23,7 +23,7 @@ class EmailNotificationService implements NotificationServiceInterface
     private function sendEmail(MailerInterface $mailer, string $recipient, string $subject, string $message): void
     {
         $email = (new Email())
-            ->from('from@example.org')
+            ->from('no-reply@matchgroup.tech')
             ->to($recipient)
             ->subject($subject)
             ->text($message)
