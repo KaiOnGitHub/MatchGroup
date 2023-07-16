@@ -16,35 +16,44 @@
                     <script type="application/json" id="notifications-mercure-url">
                     {% set mercureUrl = app.request.server.get('MERCURE_PUBLIC_URL') ~ '?topic=' ~ notificationTopic|escape('js') %}
                     {{ mercureUrl|json_encode(constant('JSON_UNESCAPED_SLASHES') b-or constant('JSON_HEX_TAG'))|raw }}
+
+
+
                     </script>
                 </div>
             </div>
 
             <a href="/" class="new-group-button btn btn-danger">Neue Gruppe erstellen?</a>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="card">
-                        <div class="card-body">
-                            <h1>{{ matchGroup.name }}</h1>
-                            <p><strong>Ort<br></strong> {{ matchGroup.location }}</p>
-                            <p><strong>Datum und Uhrzeit<br></strong>
-                                {{ matchGroup.date|date('l, j. F Y, H:i') }} Uhr
-                            </p>
-                            <p><strong>Anzahl MitspielerInnen insgesamt<br></strong> {{ matchGroup.numPlayersRequired }}
-                            </p>
-                            <div class="copy-link-button-container">
-                                <button class="btn btn-primary copy-link-button"
-                                        data-action="click->matchgroup#copyLinkToClipboard"
-                                        data-copy-to-clipboard-url="https://{{ matchGroup.url }}">
-                                    Einladungslink kopieren
-                                </button>
-                                <div class="feedback-message btn-danger" id="copyLinkFeedbackMessage">
-                                    Link kopiert!
+                        <div class="card-body group-head">
+                            <div class="group-head">
+                                <div class="group-head-head">
+                                    <h1>{{ matchGroup.name }}</h1>
+                                    <div class="copy-link-button-container">
+                                        <button class="btn btn-primary copy-link-button"
+                                                data-action="click->matchgroup#copyLinkToClipboard"
+                                                data-copy-to-clipboard-url="https://{{ matchGroup.url }}">
+                                            Einladungslink kopieren
+                                        </button>
+                                        <div class="feedback-message btn-danger" id="copyLinkFeedbackMessage">
+                                            Link kopiert!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="group-head-content">
+                                    <p>Ort:<br> <strong>{{ matchGroup.location }} </strong></p>
+                                    <p>Datum und Uhrzeit:<br>
+                                        <strong>{{ matchGroup.date|date('l, j. F Y, H:i') }} Uhr</strong>
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
+                <div class="col-md-6">
                     <div class="card">
                         <div class="card-body">
                             <div id="anmeldung-anchor"></div>

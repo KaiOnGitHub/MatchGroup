@@ -24,33 +24,24 @@ a {
 ******************************************************/
 
 body {
+    font-size: 18px;
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     min-height: 100vh;
     overflow-y: auto;
     background: linear-gradient(45deg, #f7b267, #f79d65, #f48464, #f16f63, #ee5861, #eb425f, #e82d5d, #e51a5b, #d6175a, #c31658, #b01556, #9f1455);
-    background: #0f0c29;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: #0f0c29; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-    background: #2C3E50;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    background: #757F9A;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-    background: #FDC830;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #F37335, #FDC830);  /* Chrome 10-25, Safari 5.1-6 */
+    background: #FDC830; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F37335, #FDC830); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #F37335, #FDC830); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     background: linear-gradient(45deg, #96d5ff, #6b8cce, #3b4ba5, #1e2374);
     background: linear-gradient(45deg, #96d5ff, #6b8cce, #4c63a5, #30427d);
     background: linear-gradient(45deg, #8be8f4, #6b8cce, #4c63a5, #30427d);
-
 
 
 }
@@ -69,20 +60,16 @@ header {
     margin: 40px auto;
 }
 
-@media screen and (max-width: 768px) {
-    .container {
-        width: calc(100% - 30px);
-        margin-left: 15px;
-        margin-right: 15px;
-    }
-}
-
 .card {
     border: none;
     margin-bottom: 20px;
     background: #D3CCE3; /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.card-body.group-head {
+    min-height: auto;
 }
 
 ol {
@@ -140,10 +127,6 @@ ol {
     border-radius: 3px;
     margin-top: 30px;
     margin-bottom: 30px;
-}
-
-.copy-link-button-container {
-    position: relative;
 }
 
 .feedback-message {
@@ -230,23 +213,114 @@ ol {
 }
 
 /* Colors for message senders */
-.colorId-1 { color: rgb(248, 83, 5); }
-.colorId-2 { color: rgb(43, 218, 203); }
-.colorId-3 { color: rgb(131, 53, 226); }
-.colorId-4 { color: rgb(85, 176, 67); }
-.colorId-5 { color: rgb(198, 230, 25); }
-.colorId-6 { color: rgb(22, 137, 235); }
-.colorId-7 { color: rgb(222, 68, 226); }
-.colorId-8 { color: rgb(2, 166, 78); }
-.colorId-9 { color: rgb(232, 87, 5); }
-.colorId-10 { color: rgb(118, 168, 220); }
-.colorId-11 { color: rgb(244, 36, 104); }
-.colorId-12 { color: rgb(52, 185, 82); }
-.colorId-13 { color: rgb(243, 202, 31); }
-.colorId-14 { color: rgb(69, 26, 173); }
-.colorId-15 { color: rgb(24, 121, 18); }
-.colorId-16 { color: rgb(147, 76, 139); }
-.colorId-17 { color: rgb(251, 140, 0); }
-.colorId-18 { color: rgb(27, 160, 220); }
-.colorId-19 { color: rgb(211, 40, 9); }
-.colorId-20 { color: rgb(68, 144, 235); }
+.colorId-1 {
+    color: rgb(248, 83, 5);
+}
+
+.colorId-2 {
+    color: rgb(43, 218, 203);
+}
+
+.colorId-3 {
+    color: rgb(131, 53, 226);
+}
+
+.colorId-4 {
+    color: rgb(85, 176, 67);
+}
+
+.colorId-5 {
+    color: rgb(198, 230, 25);
+}
+
+.colorId-6 {
+    color: rgb(22, 137, 235);
+}
+
+.colorId-7 {
+    color: rgb(222, 68, 226);
+}
+
+.colorId-8 {
+    color: rgb(2, 166, 78);
+}
+
+.colorId-9 {
+    color: rgb(232, 87, 5);
+}
+
+.colorId-10 {
+    color: rgb(118, 168, 220);
+}
+
+.colorId-11 {
+    color: rgb(244, 36, 104);
+}
+
+.colorId-12 {
+    color: rgb(52, 185, 82);
+}
+
+.colorId-13 {
+    color: rgb(243, 202, 31);
+}
+
+.colorId-14 {
+    color: rgb(69, 26, 173);
+}
+
+.colorId-15 {
+    color: rgb(24, 121, 18);
+}
+
+.colorId-16 {
+    color: rgb(147, 76, 139);
+}
+
+.colorId-17 {
+    color: rgb(251, 140, 0);
+}
+
+.colorId-18 {
+    color: rgb(27, 160, 220);
+}
+
+.colorId-19 {
+    color: rgb(211, 40, 9);
+}
+
+.colorId-20 {
+    color: rgb(68, 144, 235);
+}
+
+/******************************************************
+*** MEDIA QUERIES *************************************
+******************************************************/
+@media screen and (min-width: 768px) {
+    .card-body {
+        min-height: 350px;
+    }
+
+    .group-head-head, .group-head-content {
+        gap: 40px;
+        display: flex;
+    }
+
+    .copy-link-button-container {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: calc(100% - 30px);
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .copy-link-button-container {
+        margin-bottom: 15px;
+    }
+}
