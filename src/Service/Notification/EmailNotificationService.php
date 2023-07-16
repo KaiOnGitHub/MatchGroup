@@ -15,8 +15,7 @@ class EmailNotificationService implements NotificationServiceInterface
 
     public function sendNotification(PlayerEntity $recipient, string $subject, string $message): void
     {
-        $toMail = 'kai.koenig@pm.me';
-        // TODO: Actually get mail from player
+        $toMail = $recipient->getEmail();
         $this->sendEmail($this->mailer, $toMail, $subject, $message);
     }
 
