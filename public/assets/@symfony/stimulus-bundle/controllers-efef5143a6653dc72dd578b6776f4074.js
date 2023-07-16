@@ -1,0 +1,11 @@
+import controller_0 from '../ux-turbo/turbo_controller.js';
+import controller_1 from '../ux-turbo/turbo_stream_controller.js';
+import controller_2 from '../../controllers/notification_controller.js';
+import controller_3 from '../../controllers/matchgroup_controller.js';
+import controller_4 from '../../controllers/chat_controller.js';
+import controller_5 from '../../controllers/datepicker_controller.js';
+import controller_6 from '../../controllers/joinform_controller.js';
+import controller_7 from '../../controllers/scrollto_controller.js';
+export const eagerControllers = {"symfony--ux-turbo--turbo-core": controller_0, "symfony--ux-turbo--mercure-turbo-stream": controller_1, "notification": controller_2, "matchgroup": controller_3, "chat": controller_4, "datepicker": controller_5, "joinform": controller_6, "scrollto": controller_7};
+export const lazyControllers = {};
+export const isApplicationDebug = true;

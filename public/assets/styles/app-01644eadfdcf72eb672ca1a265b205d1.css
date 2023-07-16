@@ -1,0 +1,252 @@
+/******************************************************
+*** FONTS AND TYPE ************************************
+******************************************************/
+
+/* Import Pacifico font for headings */
+@import url('https://fonts.googleapis.com/css?family=Belanosima');
+
+/* Import Roboto font for body text */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700');
+
+/* Apply Montserrat font to headings with class "heading-font" */
+h1, h2 {
+    font-family: 'Belanosima', cursive;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #3D84F7FF;
+}
+
+
+/******************************************************
+*** LAYOUT ********************************************
+******************************************************/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-y: auto;
+    background: linear-gradient(45deg, #f7b267, #f79d65, #f48464, #f16f63, #ee5861, #eb425f, #e82d5d, #e51a5b, #d6175a, #c31658, #b01556, #9f1455);
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    background: #2C3E50;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    background: #757F9A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    background: #FDC830;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F37335, #FDC830);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F37335, #FDC830); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    background: linear-gradient(45deg, #96d5ff, #6b8cce, #3b4ba5, #1e2374);
+    background: linear-gradient(45deg, #96d5ff, #6b8cce, #4c63a5, #30427d);
+    background: linear-gradient(45deg, #8be8f4, #6b8cce, #4c63a5, #30427d);
+
+
+
+}
+
+header {
+    display: none;
+}
+
+.container {
+    position: relative;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 40px auto;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: calc(100% - 30px);
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
+.card {
+    border: none;
+    margin-bottom: 20px;
+    background: #D3CCE3; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+ol {
+    padding-left: 10px;
+}
+
+/******************************************************
+*** BUTTONS *******************************************
+******************************************************/
+
+.btn {
+    border: none;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #42a5f5, #3d84f7);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #3d84f7, #3182ce);
+}
+
+.btn-primary:focus {
+    background: linear-gradient(45deg, #3d84f7, #3182ce);
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(61, 130, 204, 0.5);
+}
+
+.btn-danger {
+    background: linear-gradient(45deg, #FF7070, #FF5F5F);
+    border-color: #FF5F5F;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background: linear-gradient(45deg, #FF5F5F, #FF4E4E);
+    border-color: #FF4E4E;
+}
+
+.new-group-button {
+    position: absolute;
+    top: -25px;
+    left: 20px;
+    z-index: 1;
+}
+
+
+/******************************************************
+*** MATCHGROUP VIEW ***********************************
+******************************************************/
+
+.match-group {
+    background: #eee;
+    padding: 30px;
+    border-radius: 3px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.copy-link-button-container {
+    position: relative;
+}
+
+.feedback-message {
+    display: none;
+    z-index: 1;
+    position: absolute;
+    top: 43px;
+    left: 0;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.registered-player {
+    display: flex;
+    padding: 20px;
+    background: white;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    min-height: 80px;
+    align-items: center;
+}
+
+.registered-player-number {
+    width: 25px;
+}
+
+.registered-player-actions {
+    margin-left: auto;
+}
+
+/******************************************************
+*** CHAT **********************************************
+******************************************************/
+
+.chat-container {
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+.message {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.message-info {
+    margin-left: 10px;
+}
+
+.message-sender {
+    font-size: 12px;
+    font-weight: bold;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.message-date {
+    font-size: 12px;
+    color: #888;
+    align-self: flex-end;
+}
+
+/* Chat Scrollbar */
+.scrollable-element {
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #4caf50 #f1f1f1;
+}
+
+.scrollable-element::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scrollable-element::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #42a5f5, #3d84f7);
+    border-radius: 4px;
+}
+
+/* Colors for message senders */
+.colorId-1 { color: rgb(248, 83, 5); }
+.colorId-2 { color: rgb(43, 218, 203); }
+.colorId-3 { color: rgb(131, 53, 226); }
+.colorId-4 { color: rgb(85, 176, 67); }
+.colorId-5 { color: rgb(198, 230, 25); }
+.colorId-6 { color: rgb(22, 137, 235); }
+.colorId-7 { color: rgb(222, 68, 226); }
+.colorId-8 { color: rgb(2, 166, 78); }
+.colorId-9 { color: rgb(232, 87, 5); }
+.colorId-10 { color: rgb(118, 168, 220); }
+.colorId-11 { color: rgb(244, 36, 104); }
+.colorId-12 { color: rgb(52, 185, 82); }
+.colorId-13 { color: rgb(243, 202, 31); }
+.colorId-14 { color: rgb(69, 26, 173); }
+.colorId-15 { color: rgb(24, 121, 18); }
+.colorId-16 { color: rgb(147, 76, 139); }
+.colorId-17 { color: rgb(251, 140, 0); }
+.colorId-18 { color: rgb(27, 160, 220); }
+.colorId-19 { color: rgb(211, 40, 9); }
+.colorId-20 { color: rgb(68, 144, 235); }
