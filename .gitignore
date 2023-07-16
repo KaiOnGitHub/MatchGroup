@@ -10,6 +10,7 @@
 ###< symfony/framework-bundle ###
 
 ###> symfony/asset-mapper ###
+# We do commit our assets instead of compiling them in production (didn't work, probably due to cache)
 # /public/assets/
 ###< symfony/asset-mapper ###
 .env.prod
